@@ -1,5 +1,5 @@
 # Freeflow project - NUnit Hybrid
-This basic project is built on top of the NUnit version of https://github.com/antonregis/PlayingWithExtentReports to learn more about different techniques used in Selenium such as Page Factory, ExcelDataReader, AutoIT and Resource Manager.
+This basic Freeflow project is built on top of the NUnit version of https://github.com/antonregis/PlayingWithExtentReports to learn more about different techniques used in Selenium such as Page Factory, ExcelDataReader, AutoIT and Resource Manager.
 
 Learning goal:
 - Test Report (ExtentHtmlReporter)

@@ -25,9 +25,7 @@ namespace Freeflow.NUnitTests
             // Initialize ExtentReports
             var htmlReporter = new ExtentHtmlReporter(ConstantUtils.ReportsPath);
             extent = new ExtentReports();
-            extent.AttachReporter(htmlReporter);
-
-            FreeflowPage freeflowPageObj = new FreeflowPage(driver);
+            extent.AttachReporter(htmlReporter);          
         }
 
 
