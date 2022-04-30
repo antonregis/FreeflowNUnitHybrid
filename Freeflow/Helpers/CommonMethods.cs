@@ -1,4 +1,4 @@
-﻿using AventStack.ExtentReports;
+﻿using Freeflow.Config;
 using OpenQA.Selenium;
 using System.Text;
 
@@ -12,7 +12,7 @@ namespace Freeflow.Helpers
         {
             public static string SaveScreenshot(IWebDriver driver, string ScreenShotFileName)
             {
-                var folderLocation = (ConstantUtils.ScreenshotPath);
+                var folderLocation = (FreeflowResource.ScreenshotPath);
 
                 if (!System.IO.Directory.Exists(folderLocation))
                 {

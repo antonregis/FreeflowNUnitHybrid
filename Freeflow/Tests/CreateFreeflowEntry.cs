@@ -5,6 +5,7 @@ using Freeflow.Pages;
 using NUnit.Framework;
 using static Freeflow.Helpers.CommonMethods;
 using AventStack.ExtentReports.Reporter;
+using Freeflow.Config;
 
 namespace Freeflow.NUnitTests
 {       
@@ -21,7 +22,7 @@ namespace Freeflow.NUnitTests
         public void StartExtentReports() 
         {
             // Initialize ExtentReports
-            var htmlReporter = new ExtentHtmlReporter(ConstantUtils.ReportsPath);
+            var htmlReporter = new ExtentHtmlReporter(FreeflowResource.ReporstPath);
             extent = new ExtentReports();
             extent.AttachReporter(htmlReporter);
         }

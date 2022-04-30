@@ -1,4 +1,5 @@
-﻿using Freeflow.Helpers;
+﻿using Freeflow.Config;
+using Freeflow.Helpers;
 using NUnit.Framework;
 using OpenQA.Selenium.Chrome;
 
@@ -13,7 +14,7 @@ namespace Freeflow.Global
             // Open chrome browser, no login required for this test
             CommonDriver.driver = new ChromeDriver();
             CommonDriver.driver.Manage().Window.Maximize();
-            CommonDriver.driver.Navigate().GoToUrl(ConstantUtils.Url);            
+            CommonDriver.driver.Navigate().GoToUrl(FreeflowResource.Url);            
         }
 
         [TearDown]
