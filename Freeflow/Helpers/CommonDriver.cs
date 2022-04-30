@@ -3,7 +3,7 @@
 
 namespace Freeflow.Helpers
 {
-    public class CommonDriver
+    class CommonDriver
     {
         public static IWebDriver driver;
     }

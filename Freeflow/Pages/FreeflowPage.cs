@@ -4,14 +4,14 @@ using SeleniumExtras.PageObjects;
 
 namespace Freeflow.Pages
 {
-    public class FreeflowPage // FreeflowPage
+    public class FreeflowPage
     {
         public FreeflowPage(IWebDriver driver)
         {
             PageFactory.InitElements(driver, this);
         }
 
-        #region  Initialize Web Elements
+        #region  Initialize Web Elements (Page Factory style)
 
         [FindsBy(How = How.XPath, Using = "//a[contains(text(),'Create')]")]
         public IWebElement createButton { get; set; }

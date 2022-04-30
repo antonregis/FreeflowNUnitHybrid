@@ -1,34 +1,32 @@
 ﻿using AventStack.ExtentReports;
-using AventStack.ExtentReports.Reporter;
 using Freeflow.Helpers;
+using Freeflow.Global;
 using Freeflow.Pages;
 using NUnit.Framework;
-using OpenQA.Selenium.Chrome;
 using static Freeflow.Helpers.CommonMethods;
+using AventStack.ExtentReports.Reporter;
 
 namespace Freeflow.NUnitTests
-{
+{       
+  
     [TestFixture]
-    public class FreeflowFeature : CommonDriver
+    class FreeflowFeature : Base
     {
+        // Report and Tests for ExtentReports      
+        private static ExtentReports extent;
         private static ExtentTest test;
-        private static ExtentReports extent;        
+
 
         [OneTimeSetUp]
-        public void Start()
+        public void StartExtentReports() 
         {
-            // Open chrome browser, no login required for this test
-            driver = new ChromeDriver();
-            driver.Manage().Window.Maximize();
-            driver.Navigate().GoToUrl(ConstantUtils.Url);
-
             // Initialize ExtentReports
             var htmlReporter = new ExtentHtmlReporter(ConstantUtils.ReportsPath);
             extent = new ExtentReports();
-            extent.AttachReporter(htmlReporter);          
+            extent.AttachReporter(htmlReporter);
         }
-
-
+        
+        
         [Test]
         public void T01_CreateFreeflowEntry_Pass()
         {
@@ -38,13 +36,13 @@ namespace Freeflow.NUnitTests
                 test = extent.CreateTest(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
                 // Initializing page objects (Page Factory)
-                FreeflowPage freeflowPageObj = new FreeflowPage(driver);
+                FreeflowPage freeflowPageObj = new FreeflowPage(CommonDriver.driver);
 
                 // Create Freeflow entry
                 freeflowPageObj.CreateEntry();
 
                 // Take a screenshot
-                string img = SaveScreenShotClass.SaveScreenshot(driver, "Screenshot");
+                string img = SaveScreenShotClass.SaveScreenshot(CommonDriver.driver, "Screenshot");
                 test.AddScreenCaptureFromPath(img);
 
                 // Get entered info
@@ -75,13 +73,13 @@ namespace Freeflow.NUnitTests
                 test = extent.CreateTest(System.Reflection.MethodBase.GetCurrentMethod().Name);
 
                 // Initializing page objects (Page Factory)
-                FreeflowPage freeflowPageObj = new FreeflowPage(driver);
+                FreeflowPage freeflowPageObj = new FreeflowPage(CommonDriver.driver);
 
                 // Create Freeflow entry
                 freeflowPageObj.CreateEntry();
 
                 // Take a screenshot
-                string img = SaveScreenShotClass.SaveScreenshot(driver, "Screenshot");
+                string img = SaveScreenShotClass.SaveScreenshot(CommonDriver.driver, "Screenshot");
                 test.AddScreenCaptureFromPath(img);
 
                 // Get entered info
@@ -105,11 +103,8 @@ namespace Freeflow.NUnitTests
 
 
         [OneTimeTearDown]
-        public void CloseTestRun()
+        public void SaveExtentReports()
         {
-            // Close the browser
-            driver.Quit();
-
             // Save Extentereport html file
             extent.Flush();
         }
