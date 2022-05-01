@@ -14,5 +14,8 @@
 
         //ExtentReportsPath
         public static string ReportsPath = @"G:\FreeflowNUnitHybrid\Freeflow\TestReports\Extentreport\";
+
+        // ExcelDataPath
+        public static string ExcelPath = @"G:\FreeflowNUnitHybrid\Freeflow\ExcelData\Freeflow.xlsx";
     }
 }

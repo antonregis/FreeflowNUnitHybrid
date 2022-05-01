@@ -30,9 +30,6 @@ Pagefactory:
 Setup and TearDown Methods
 - https://docs.nunit.org/articles/nunit/writing-tests/setup-teardown/index.html#:~:text=Setup%20methods%20(both%20types)%20are,then%20on%20the%20base%20class.
 - https://youtu.be/5Q6ENc9sCF8
- 
-Resource Manager:
-- https://youtu.be/QZtW9S-WvPA
 
 AutoIT:
 - https://www.autoitscript.com/

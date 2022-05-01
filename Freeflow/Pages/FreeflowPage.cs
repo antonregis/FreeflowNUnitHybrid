@@ -36,7 +36,7 @@ namespace Freeflow.Pages
         public void CreateEntry() 
         {
             // Click create button
-            createButton.Click();
+            createButton.Click();            
 
             // Enter random text textbox
             randomTextTextbox.SendKeys("ten");

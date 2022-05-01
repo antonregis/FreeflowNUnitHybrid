@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ExcelPath" xml:space="preserve">
-    <value>G:\FreeflowNUnitHybrid\Freeflow\ExcelData</value>
+    <value>G:\FreeflowNUnitHybrid\Freeflow\ExcelData\Freeflow.xlsx</value>
   </data>
   <data name="ReporstPath" xml:space="preserve">
     <value>G:\FreeflowNUnitHybrid\Freeflow\TestReports\Extentreport\</value>
@@ -127,6 +127,9 @@
     <value>G:\FreeflowNUnitHybrid\Freeflow\TestReports\Screenshots\</value>
   </data>
   <data name="Url" xml:space="preserve">
-    <value>http://tademo.codifyme.co.nz/freeflow</value>
+    <value>https://tademo.codifyme.co.nz/user/login</value>
+  </data>
+  <data name="UrlFreeflow" xml:space="preserve">
+    <value>https://tademo.codifyme.co.nz/freeflow</value>
   </data>
 </root>

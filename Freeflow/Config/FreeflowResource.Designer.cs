@@ -61,7 +61,7 @@ namespace Freeflow.Config {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to G:\FreeflowNUnitHybrid\Freeflow\ExcelData.
+        ///   Looks up a localized string similar to G:\FreeflowNUnitHybrid\Freeflow\ExcelData\Freeflow.xlsx.
         /// </summary>
         internal static string ExcelPath {
             get {
@@ -88,11 +88,20 @@ namespace Freeflow.Config {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to http://tademo.codifyme.co.nz/freeflow.
+        ///   Looks up a localized string similar to https://tademo.codifyme.co.nz/user/login.
         /// </summary>
         internal static string Url {
             get {
                 return ResourceManager.GetString("Url", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to https://tademo.codifyme.co.nz/freeflow.
+        /// </summary>
+        internal static string UrlFreeflow {
+            get {
+                return ResourceManager.GetString("UrlFreeflow", resourceCulture);
             }
         }
     }
