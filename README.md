@@ -7,7 +7,6 @@ Learning goal:
 - ExcelDataReader
 - Page Factory
 - Resource Manager 
-- AutoIT
 - Setup and TearDown Methods
 
 Test website: 
